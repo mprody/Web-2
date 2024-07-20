@@ -1,0 +1,409 @@
+*{
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 0px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  .logo {
+    color: #623873;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .navbar ul {
+    list-style: none;
+    li {
+      position: relative;
+      float: left;
+      a {
+        font-size: 20px;
+        padding: 20px;
+        color: #623873;
+        display: block;
+        text-decoration: none;
+      }
+      a::before {
+        content: "";
+        position: absolute;
+        bottom: 10px;
+        width: 65%;
+        height: 2px;
+        background: #c686e6;
+        transform: scaleX(0);
+        transition: transform 0.5s ease-in-out;
+        transform-origin: right;
+      }
+    }
+  }
+}
+header ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+header .navbar ul li ul {
+  position: absolute;
+  top: 53px;
+  left: 0;
+  width: 150px;
+  background: #fff;
+  padding: 0;
+  display: none;
+  li {
+    width: 100%;
+    border-top: 1.5px solid #c686e6;
+    a {
+      font-size: 0.9em;
+      color: #623873;
+    }
+  }
+  
+
+
+
+}
+header .navbar ul li:hover > ul {
+  display: initial;
+}
+#menu-bar {
+  display: none;
+}
+
+header label {
+  font-size: 20px;
+  color: #623873;
+  cursor: pointer;
+  display: none;
+}
+
+main {
+  background: #e0e0e0;
+  .hero-panel {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+
+    /*Fondo de pantalla del hero-panel*/
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(/img/heropanel.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  .hero-panel h1 {
+    font-size: 5em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+
+  .boton-heroPanel {
+    display: block;
+    width: 200px;
+    border: 3px solid black;
+
+    padding: 1em;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    border-radius: 20px;
+  }
+  .temporada {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .carta {
+    background: white;
+    width: 250px;
+    margin: 40px;
+    border-radius: 15px;
+  }
+  
+  .imagen-carta {
+    background-color: aqua;
+    height: 270px;
+    margin-bottom: 15px;
+    border-radius: 15px 15px 0 0;
+    background-size: cover;
+  }
+  .carta h2 {
+    margin: 5px;
+  }
+  .carta p {
+    margin: 5px 10px;
+  }
+  .producto1 {
+    background-image: url(img/Anillos/1.jpeg);
+  }
+  .producto2 {
+    background-image: url(img/Aritos/1.jpeg);
+  }
+  .producto3 {
+    background-image: url(img/Collares/1.jpeg);
+  }
+  
+  .btn-carta {
+    background-color: #623873;
+    color: white;
+    padding: 5px 10px;
+    margin: 20px 50px;
+  }
+  /*https://getcssscan.com/css-box-shadow-examples* pagina que genera distintos estilos de sombras*/
+  .carta:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    box-shadow: rgb(248, 182, 2) 0px 1px 2px, rgb(248, 182, 2) 0px 0px 0px 3px;
+  }
+  
+  .button-61 {
+    align-items: center;
+    appearance: none;
+    border-radius: 4px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 3px 1px -2px, rgba(0, 0, 0, 0.14) 0 2px 2px 0,
+      rgba(0, 0, 0, 0.12) 0 1px 5px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: Roboto, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    height: 36px;
+    justify-content: center;
+    letter-spacing: 0.0892857em;
+    line-height: normal;
+    min-width: 64px;
+    outline: none;
+    overflow: visible;
+    padding: 0 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    will-change: transform, opacity;
+    margin: 20px 50px;
+  }
+  
+  .button-61:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px -1px, rgba(0, 0, 0, 0.14) 0 4px 5px 0,
+      rgba(0, 0, 0, 0.12) 0 1px 10px 0;
+  }
+  
+  .button-61:disabled {
+    background-color: rgba(0, 0, 0, 0.12);
+    box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 0, rgba(0, 0, 0, 0.14) 0 0 0 0,
+      rgba(0, 0, 0, 0.12) 0 0 0 0;
+    color: rgba(0, 0, 0, 0.37);
+    cursor: default;
+    pointer-events: none;
+  }
+  
+  .button-61:not(:disabled) {
+    background-color: #6200ee;
+  }
+  
+  .button-61:focus {
+    box-shadow: rgba(0, 0, 0, 0.2) 0 2px 4px -1px, rgba(0, 0, 0, 0.14) 0 4px 5px 0,
+      rgba(0, 0, 0, 0.12) 0 1px 10px 0;
+  }
+  
+  .button-61:active {
+    box-shadow: rgba(0, 0, 0, 0.2) 0 5px 5px -3px,
+      rgba(0, 0, 0, 0.14) 0 8px 10px 1px, rgba(0, 0, 0, 0.12) 0 3px 14px 2px;
+    background: #a46bf5;
+  }
+  
+  /* CSS */
+  .button-86 {
+    all: unset;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    position: relative;
+    color: #f0f0f0;
+    cursor: pointer;
+    z-index: 1;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .button-86::after,
+  .button-86::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -99999;
+    transition: all 0.4s;
+  }
+  
+  .button-86::before {
+    transform: translate(0%, 0%);
+    width: 100%;
+    height: 100%;
+    background: #28282d;
+    border-radius: 10px;
+  }
+  
+  .button-86::after {
+    transform: translate(10px, 10px);
+    width: 35px;
+    height: 35px;
+    background: #ffffff15;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 50px;
+  }
+  
+  .button-86:hover::before {
+    transform: translate(5%, 20%);
+    width: 110%;
+    height: 110%;
+  }
+  
+  .button-86:hover::after {
+    border-radius: 10px;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+  }
+  
+  .button-86:active::after {
+    transition: 0s;
+    transform: translate(0, 5%);
+  }
+}
+
+#menu-bar {
+  display: none;
+}
+
+.pie-pagina {
+  width: 100%;
+  background-color: #623873;
+  color: #ffffff;
+  .grupo-1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+    .box figure {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+       h2 {
+        font-size: 35px;
+        color: white;
+        text-decoration: none;
+      }
+      a {
+        text-decoration: none;
+      }
+      h3 {
+        margin-bottom: 20px;
+        font-size: 25px;
+      }
+    }
+    .red-social a {
+      display: inline-block;
+      text-decoration: none;
+      width: 45px;
+      height: 45px;
+      line-height: 45px;
+      color: #ffffff;
+      margin-right: 10px;
+      background-color: #512f5f;
+      text-align: center;
+      transition: all 300ms ease;
+    }
+    a:hover {
+      color: #c686e6;
+    }
+  }
+  .grupo-2 {
+    padding: 15px 10px;
+    text-align: center;
+    background-color: #452851;
+    small {
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    padding: 20px;
+  }
+  header label {
+    display: initial;
+  }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  header .navbar ul li {
+    width: 100%;
+  }
+  header .navbar ul li ul {
+    position: relative;
+    width: 100%;
+  }
+  header .navbar ul li ul li {
+    background: #eee;
+  }
+  header .navbar ul li ul li ul {
+    width: 100%;
+    left: 0;
+  }
+  #menu-bar:checked ~ .navbar {
+    display: initial;
+  }
+}

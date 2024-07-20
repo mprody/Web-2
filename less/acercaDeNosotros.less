@@ -1,0 +1,41 @@
+main{
+    .seccion{
+        padding-top: 4.5%;
+        background-color: white;
+    }
+}
+
+@media (max-width: 1024px) {
+    header {
+      padding: 20px;
+    }
+    header label {
+      display: initial;
+    }
+    header .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+    header .navbar ul li {
+      width: 100%;
+    }
+    header .navbar ul li ul {
+      position: relative;
+      width: 100%;
+    }
+    header .navbar ul li ul li {
+      background: #eee;
+    }
+    header .navbar ul li ul li ul {
+      width: 100%;
+      left: 0;
+    }
+    #menu-bar:checked ~ .navbar {
+      display: initial;
+    }
+  }
