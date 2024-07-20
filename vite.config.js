@@ -9,7 +9,7 @@ import handlebars from 'vite-plugin-handlebars';
 export default defineConfig(
     {
         appType:"mpa",
-        base: "/galeria/",
+        base: "/Web-2/",
         build:{
             rollupOptions:{
                 input:Object.fromEntries(
